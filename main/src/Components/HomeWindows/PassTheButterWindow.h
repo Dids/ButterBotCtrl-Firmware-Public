@@ -17,6 +17,9 @@ private:
 
 	static constexpr const char* TITLE = "Ojenna voita";
 
+	// Text-only window: 10 lines is all the home screen can show
+	static constexpr int32_t MaxSentenceLines = 10;
+
 	void buildUI(PassTheButterData data);
 };
 

@@ -15,6 +15,7 @@ void FactWindow::buildUI(FactData data){
 	lv_label_set_long_mode(sentenceLabel, LV_LABEL_LONG_WRAP);
 	lv_obj_add_style(sentenceLabel, labelDefaultStyle, 0);
 	lv_obj_set_size(sentenceLabel, 90, LV_SIZE_CONTENT);
+	capLines(sentenceLabel, MaxSentenceLines);
 
 	updateLayout();
 }

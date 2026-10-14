@@ -17,6 +17,9 @@ private:
 
 	static constexpr const char* TITLE = "Fakta";
 
+	// Text-only window: 10 lines is all the home screen can show
+	static constexpr int32_t MaxSentenceLines = 10;
+
 	void buildUI(FactData data);
 };
 

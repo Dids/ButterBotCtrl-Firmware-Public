@@ -77,6 +77,19 @@ void HomeWindow::buildUI(lv_obj_t* parent, const char* title){
 	updateLayout();
 }
 
+void HomeWindow::capLines(lv_obj_t* label, const int32_t maxLines){
+	const int32_t lineH = lv_font_get_line_height(&lv_font_butter);
+	const int32_t lineSpace = lv_obj_get_style_text_line_space(label, 0);
+	const int32_t padVer = lv_obj_get_style_pad_top(label, 0) + lv_obj_get_style_pad_bottom(label, 0);
+	const int32_t maxH = maxLines * lineH + (maxLines - 1) * lineSpace + padVer;
+
+	lv_obj_update_layout(label);
+	if(lv_obj_get_height(label) > maxH){
+		lv_label_set_long_mode(label, LV_LABEL_LONG_DOT);
+		lv_obj_set_height(label, maxH);
+	}
+}
+
 void HomeWindow::updateLayout(){
 	// Manually update layout so we can get the final object widths
 	lv_obj_set_size(innerContent, LV_SIZE_CONTENT, LV_SIZE_CONTENT);

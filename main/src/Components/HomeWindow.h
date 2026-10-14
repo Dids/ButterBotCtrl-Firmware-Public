@@ -37,6 +37,13 @@ protected:
 	/* Properly scales window top bar with inner content */
 	void updateLayout();
 
+	/**
+	 * Cuts a wrapping label to maxLines, ending it with "..."
+	 * @param label label with labelDefaultStyle and its final width already set
+	 * @param maxLines number of lines that still fit on screen
+	 */
+	void capLines(lv_obj_t* label, int32_t maxLines);
+
 private:
 	lv_obj_t* titleEl;
 	lv_obj_t* titleLabel;
