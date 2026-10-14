@@ -10,8 +10,6 @@ Packs groups of files from `spiffs_archives/` into a custom binary archive forma
 
 ```bash
 set -e               # abort the whole script on any command failure
-shopt -s globstar    # enables ** to match files recursively in subdirectories
-shopt -s extglob     # enables extended glob patterns (not actually used here, but available)
 
 compress=true
 for arg in "$@"; do
@@ -41,17 +39,17 @@ Each subdirectory of `spiffs_archives/` becomes one `.sz` archive file. For exam
 ## Count the files
 
 ```bash
-  files=("$arch/**/*")    # glob all paths (files + dirs) recursively under this archive dir
+  files=()
+  while IFS= read -r file; do
+    files+=("$file")
+  done < <(find "$arch" -type f | awk '...' | LC_ALL=C sort ... | cut -f2)
 
-  count=0
-  for file in "${files[@]}"; do
-      if [[ -f $file ]]; then   # skip directories, count only regular files
-        count=$((count+1))
-      fi
-  done
+  count=${#files[@]}
 ```
 
-This counts only regular files (not directories). The count is written first because `FileArchive.cpp` reads it at offset 0 to `reserve()` its entry list.
+`find` lists regular files only. The sort mimics a glibc `en_US` glob (punctuation ignored,
+case-folded, so `10.bin` comes before `1.bin`), which keeps the output byte-identical to archives
+built on Linux. It runs on macOS's stock bash 3.2 and BSD tools. The count is written first because `FileArchive.cpp` reads it at offset 0 to `reserve()` its entry list.
 
 ---
 
@@ -81,7 +79,7 @@ The ESP32 is little-endian, and `FileArchive.cpp:11` reads the count with a plai
 
     # Strip the "spiffs_archives/<archiveName>" prefix — leaves e.g. "/icons/foo.bin"
     name=$(sed 's/spiffs_archives\/[a-zA-Z0-9]*//' <<< $file)
-    size=$(du -b $file | cut -f1)   # exact byte size of the file
+    size=$(wc -c < "$file" | tr -d ' ')   # exact byte size of the file
 
     printf "%s\0" $name >> $data    # null-terminated filename string
     printf "0: %.8x" $size \
