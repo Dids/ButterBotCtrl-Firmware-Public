@@ -1,6 +1,9 @@
 /*******************************************************************************
  * Size: 8 px
  * Bpp: 1
+ * Ä Å Ö ä å ö (U+00C4/C5/D6/E4/E5/F6) were added by hand after conversion;
+ * the body is one row shorter so the dots fit inside the 7 px line.
+ * Lowercase reuses the capital bitmaps, like the rest of this unicase font.
  * Opts: --bpp 1 --size 8 --no-compress --stride 1 --align 1 --font 5px-new.ttf --range 0,13,32-34,37,39-41,43-63,65-95,97-122,124 --format lvgl -o lv_font_butter.c
  ******************************************************************************/
 
@@ -288,7 +291,16 @@ static LV_ATTRIBUTE_LARGE_CONST const uint8_t glyph_bitmap[] = {
     0xf1, 0x68, 0xf0,
 
     /* U+007C "|" */
-    0xfe
+    0xfe,
+
+    /* U+00C4 "Ä" */
+    0x90, 0xf9, 0xf9,
+
+    /* U+00C5 "Å" */
+    0x60, 0xf9, 0xf9,
+
+    /* U+00D6 "Ö" */
+    0x90, 0xf9, 0x9f
 };
 
 
@@ -383,7 +395,13 @@ static const lv_font_fmt_txt_glyph_dsc_t glyph_dsc[] = {
     {.bitmap_index = 205, .adv_w = 64, .box_w = 3, .box_h = 5, .ofs_x = 0, .ofs_y = 0},
     {.bitmap_index = 207, .adv_w = 64, .box_w = 3, .box_h = 5, .ofs_x = 0, .ofs_y = 0},
     {.bitmap_index = 209, .adv_w = 80, .box_w = 4, .box_h = 5, .ofs_x = 0, .ofs_y = 0},
-    {.bitmap_index = 212, .adv_w = 32, .box_w = 1, .box_h = 7, .ofs_x = 0, .ofs_y = -1}
+    {.bitmap_index = 212, .adv_w = 32, .box_w = 1, .box_h = 7, .ofs_x = 0, .ofs_y = -1},
+    {.bitmap_index = 213, .adv_w = 80, .box_w = 4, .box_h = 6, .ofs_x = 0, .ofs_y = 0},
+    {.bitmap_index = 216, .adv_w = 80, .box_w = 4, .box_h = 6, .ofs_x = 0, .ofs_y = 0},
+    {.bitmap_index = 219, .adv_w = 80, .box_w = 4, .box_h = 6, .ofs_x = 0, .ofs_y = 0},
+    {.bitmap_index = 213, .adv_w = 80, .box_w = 4, .box_h = 6, .ofs_x = 0, .ofs_y = 0},
+    {.bitmap_index = 216, .adv_w = 80, .box_w = 4, .box_h = 6, .ofs_x = 0, .ofs_y = 0},
+    {.bitmap_index = 219, .adv_w = 80, .box_w = 4, .box_h = 6, .ofs_x = 0, .ofs_y = 0}
 };
 
 /*---------------------
@@ -393,6 +411,10 @@ static const lv_font_fmt_txt_glyph_dsc_t glyph_dsc[] = {
 static const uint16_t unicode_list_0[] = {
     0x0, 0xd, 0x20, 0x21, 0x22, 0x25, 0x27, 0x28,
     0x29
+};
+
+static const uint16_t unicode_list_3[] = {
+    0x0, 0x1, 0x12, 0x20, 0x21, 0x32
 };
 
 static const uint8_t glyph_id_ofs_list_2[] = {
@@ -420,6 +442,10 @@ static const lv_font_fmt_txt_cmap_t cmaps[] =
     {
         .range_start = 63, .range_length = 62, .glyph_id_start = 29,
         .unicode_list = NULL, .glyph_id_ofs_list = glyph_id_ofs_list_2, .list_length = 62, .type = LV_FONT_FMT_TXT_CMAP_FORMAT0_FULL
+    },
+    {
+        .range_start = 196, .range_length = 51, .glyph_id_start = 87,
+        .unicode_list = unicode_list_3, .glyph_id_ofs_list = NULL, .list_length = 6, .type = LV_FONT_FMT_TXT_CMAP_SPARSE_TINY
     }
 };
 
@@ -470,7 +496,7 @@ static lv_font_fmt_txt_dsc_t font_dsc = {
     .cmaps = cmaps,
     .kern_dsc = &kern_pairs,
     .kern_scale = 16,
-    .cmap_num = 3,
+    .cmap_num = 4,
     .bpp = 1,
     .kern_classes = 0,
     .bitmap_format = 0,
