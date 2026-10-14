@@ -114,10 +114,10 @@ static const std::map<DiceType, const char*> DiceTypeMap = {
 };
 
 static const std::map<DiceRollData::Phase, const char*> DiceRollSentences = {
-	{ DiceRollData::Phase::RollCount, "Roll count, please" },
-	{ DiceRollData::Phase::DiceKind, "Destiny format, please" },
-	{ DiceRollData::Phase::RollAnim, "Destiny in progress" },
-	{ DiceRollData::Phase::Result, "The dice have spoken" },
+	{ DiceRollData::Phase::RollCount, "Montako noppaa?" },
+	{ DiceRollData::Phase::DiceKind, "Valitse kohtalon muoto" },
+	{ DiceRollData::Phase::RollAnim, "Kohtalo ratkeaa" },
+	{ DiceRollData::Phase::Result, "Nopat ovat puhuneet" },
 };
 
 DiceRollWindow::DiceRollWindow(lv_obj_t* parent, const DiceRollData* params) : HomeWindow(parent, TITLE){

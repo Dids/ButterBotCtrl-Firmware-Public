@@ -7,21 +7,21 @@
 
 // Display names for detected object classes
 constexpr std::array<const char*, static_cast<size_t>(ObjClass::COUNT)> ObjClassNames = {
-	"backpack",   // Backpack
-	"bottle",     // Bottle
-	"controller", // Controller
-	"keyboard",   // Keyboard
-	"lamp",       // Lamp
-	"laptop",     // Laptop
-	"mug",        // Mug
-	"notebook",   // Notebook
-	"phone",      // Phone
-	"plant",      // Plant
+	"reppu",       // Backpack
+	"pullo",       // Bottle
+	"ohjain",      // Controller
+	"näppäimistö", // Keyboard
+	"lamppu",      // Lamp
+	"läppäri",     // Laptop
+	"muki",        // Mug
+	"vihko",       // Notebook
+	"puhelin",     // Phone
+	"kasvi",       // Plant
 };
 
 const char* objClassName(const uint8_t objClass){
 	if(objClass >= static_cast<uint8_t>(ObjClass::COUNT)){
-		return "something";
+		return "jokin";
 	}
 	return ObjClassNames[objClass];
 }

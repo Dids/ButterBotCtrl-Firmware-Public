@@ -13,7 +13,7 @@ public:
 	GasConfigEndWindow(lv_obj_t* parent, const GasConfigureEndData* params);
 
 private:
-	static constexpr const char* TITLE = "Gas Config End";
+	static constexpr const char* TITLE = "Kalibroitu";
 
 	void buildUI(GasConfigureEndData data);
 };

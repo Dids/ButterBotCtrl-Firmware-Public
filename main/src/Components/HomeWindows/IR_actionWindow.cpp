@@ -23,7 +23,7 @@ void IR_actionWindow::buildUI(const IR_actionData data){
 
 	// Sentence label
 	lv_obj_t* sentenceLabel = lv_label_create(innerContent);
-	lv_label_set_text(sentenceLabel, "Light magic activated");
+	lv_label_set_text(sentenceLabel, "Valotaikuus päällä");
 	lv_label_set_long_mode(sentenceLabel, LV_LABEL_LONG_WRAP);
 	lv_obj_add_style(sentenceLabel, labelDefaultStyle, 0);
 	lv_obj_set_style_text_align(sentenceLabel, LV_TEXT_ALIGN_CENTER, 0);

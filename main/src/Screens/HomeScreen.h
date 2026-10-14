@@ -84,8 +84,8 @@ private:
 	uint64_t overridePressTime = 0;
 	uint64_t overrideHintShownAt = 0;
 
-	// "Loading RC..." indicator
-	static constexpr const char* RCLoadText = "Loading RC...";
+	// RC loading indicator
+	static constexpr const char* RCLoadText = "RC latautuu";
 	static constexpr uint64_t RCLoadTimeoutMs = 2000;
 	uint64_t rcWaitStartTime = 0;
 	lv_obj_t* rcLoadingLabel = nullptr;

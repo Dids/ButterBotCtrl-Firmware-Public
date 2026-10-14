@@ -52,7 +52,7 @@ private:
 
 	static constexpr int32_t WindowWidth = 120;
 	static constexpr int32_t WindowHeight = 60;
-	static constexpr const char* WindowTitle = "Settings";
+	static constexpr const char* WindowTitle = "Asetukset";
 
 	const std::function<void(const Theme &newTheme)> themeCb;
 

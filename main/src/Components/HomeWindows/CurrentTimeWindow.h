@@ -15,7 +15,7 @@ public:
 	void onData(const BBData* data) override;
 
 private:
-	static constexpr const char* TITLE = "Current Time";
+	static constexpr const char* TITLE = "Kellonaika";
 
 	void buildUI(CurrentTimeData data);
 };

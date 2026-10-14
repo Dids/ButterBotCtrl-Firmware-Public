@@ -15,7 +15,7 @@ public:
 private:
 	lv_obj_t* sentenceLabel;
 
-	static constexpr const char* TITLE = "Profanity";
+	static constexpr const char* TITLE = "Kiroilu";
 
 	void buildUI(ProfanityData data);
 };

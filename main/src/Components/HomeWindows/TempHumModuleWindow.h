@@ -13,9 +13,9 @@ public:
 	TempHumModuleWindow(lv_obj_t* parent, const TempHumModuleData* params);
 
 private:
-	static constexpr const char* TITLE = "Temp Hum Module";
-	static constexpr const char* Sentence = "Environmental scoop";
-	static constexpr const char* MissingModuleSentence = "Temp module missing!";
+	static constexpr const char* TITLE = "Lämpö ja kosteus";
+	static constexpr const char* Sentence = "Sääraportti";
+	static constexpr const char* MissingModuleSentence = "Ei lämpömoduulia!";
 
 	void buildUI(TempHumModuleData data);
 };

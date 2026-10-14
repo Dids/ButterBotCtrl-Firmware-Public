@@ -16,8 +16,8 @@ private:
 	lv_obj_t* img;
 	lv_obj_t* sentenceLabel;
 
-	static constexpr const char* TITLE = "Upside Down";
-	static constexpr const char* Sentence = "Wrong way, human";
+	static constexpr const char* TITLE = "Ylösalaisin";
+	static constexpr const char* Sentence = "Väärin päin, ihminen";
 
 	void buildUI(UpsideDownData data);
 };

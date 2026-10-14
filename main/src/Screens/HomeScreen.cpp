@@ -183,7 +183,7 @@ void HomeScreen::handleButtonEvent(const Button btn, const ButtonInput::Action a
 			}
 
 			overridePressTime = millis();
-			showPopup(new HoldPopupWindow(*this, "Connecting"), Button::ManualOverride);
+			showPopup(new HoldPopupWindow(*this, "Yhdistetään"), Button::ManualOverride);
 		}
 		return;
 	}
@@ -204,7 +204,7 @@ void HomeScreen::handleButtonEvent(const Button btn, const ButtonInput::Action a
 			if(activeWindow != nullptr){
 				clearPopupFor(Button::ManualOverride);
 			} else{
-				static_cast<HoldPopupWindow*>(popup)->showHint("Hold for RC");
+				static_cast<HoldPopupWindow*>(popup)->showHint("Pidä: RC");
 				overrideHintShownAt = millis();
 			}
 		} else{
@@ -244,7 +244,7 @@ void HomeScreen::loop(){
 
 	// Show hold popup if btn held past the short-press window
 	if(summonHoldEnabled && summonPressTime != 0 && popup == nullptr && millis() - summonPressTime >= SummonShortPressMaxMs){
-		showPopup(new HoldPopupWindow(*this, "Summon", SummonLongPressMinMs - SummonShortPressMaxMs), Button::Summon);
+		showPopup(new HoldPopupWindow(*this, "Kutsu", SummonLongPressMinMs - SummonShortPressMaxMs), Button::Summon);
 	}
 
 	if(summonHoldEnabled && summonPressTime != 0 && millis() - summonPressTime >= SummonLongPressMinMs){
@@ -763,7 +763,7 @@ void HomeScreen::buildUI(){
 	guide = new GuideElement(windowContainer);
 	lv_obj_center(*guide);
 
-	// "Loading RC..." label
+	// RC loading label
 	rcLoadingLabel = lv_label_create(windowContainer);
 	lv_obj_add_flag(rcLoadingLabel, LV_OBJ_FLAG_IGNORE_LAYOUT);
 	lv_obj_add_flag(rcLoadingLabel, LV_OBJ_FLAG_FLOATING);

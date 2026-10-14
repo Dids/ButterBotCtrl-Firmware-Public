@@ -87,7 +87,7 @@ void PairingScreen::buildSettingsHint(){
 	lv_obj_set_style_text_font(label, &lv_font_butter, 0);
 	lv_obj_set_style_text_color(label, style.primaryColor, 0);
 	lv_obj_set_style_pad_hor(label, 2, 0);
-	lv_label_set_text_static(label, "Click joystick for");
+	lv_label_set_text_static(label, "Paina sauvaa:");
 
 	// The pairing archive carries the default theme's settings icon
 	lv_obj_t* icon = lv_image_create(row);

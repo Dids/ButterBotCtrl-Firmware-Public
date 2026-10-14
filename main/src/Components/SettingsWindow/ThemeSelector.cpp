@@ -61,7 +61,7 @@ void ThemeSelector::buildUI(lv_obj_t* parent){
 	// Theme widget label
 	widgetLabel = lv_label_create(*this);
 	lv_obj_add_style(widgetLabel, labelDefaultStyle, 0);
-	lv_label_set_text(widgetLabel, "THEME");
+	lv_label_set_text(widgetLabel, "TEEMA");
 	lv_obj_set_width(widgetLabel, 24);
 	lv_obj_set_pos(widgetLabel, 2, 5);
 

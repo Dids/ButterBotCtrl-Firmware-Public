@@ -6,8 +6,8 @@
 static constexpr const char* TAG = "CurrentTime";
 
 static const std::unordered_map<CurrentTimeData::Status, const char*> CurrentTimeSentences = {
-	{ CurrentTimeData::Status::NoTime, "Time is fake" },
-	{ CurrentTimeData::Status::ShowTime, "Present moment report!" },
+	{ CurrentTimeData::Status::NoTime, "Aika on harhaa" },
+	{ CurrentTimeData::Status::ShowTime, "Raportti tästä hetkestä!" },
 };
 
 CurrentTimeWindow::CurrentTimeWindow(lv_obj_t* parent, const CurrentTimeData* params) : HomeWindow(parent, TITLE){

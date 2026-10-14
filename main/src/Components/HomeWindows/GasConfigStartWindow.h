@@ -13,7 +13,7 @@ public:
 	GasConfigStartWindow(lv_obj_t* parent, const GasConfigureStartData* params);
 
 private:
-	static constexpr const char* TITLE = "Gas Config Start";
+	static constexpr const char* TITLE = "Kalibrointi alkaa";
 
 	void buildUI(GasConfigureStartData data);
 };

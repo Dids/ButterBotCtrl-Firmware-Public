@@ -17,7 +17,7 @@ public:
 	void onDismiss() override;
 
 private:
-	static constexpr const char* TITLE = "Dice Roll";
+	static constexpr const char* TITLE = "Nopanheitto";
 
 	LVGIF* gif = nullptr;
 

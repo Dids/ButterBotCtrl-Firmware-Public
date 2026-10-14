@@ -15,7 +15,7 @@ public:
 private:
 	lv_obj_t* sentenceLabel;
 
-	static constexpr const char* TITLE = "Fact";
+	static constexpr const char* TITLE = "Fakta";
 
 	void buildUI(FactData data);
 };

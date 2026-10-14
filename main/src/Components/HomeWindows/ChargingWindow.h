@@ -13,7 +13,7 @@ public:
 	ChargingWindow(lv_obj_t* parent, const BatteryData* params);
 
 private:
-	static constexpr const char* TITLE = "Charging";
+	static constexpr const char* TITLE = "Lataus";
 
 	void buildUI(BatteryData data);
 };

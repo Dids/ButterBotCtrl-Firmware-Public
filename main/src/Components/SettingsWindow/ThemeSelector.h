@@ -21,10 +21,10 @@ private:
 	uint8_t currentThemeIndex;
 	static constexpr uint8_t ThemesNum = 4;
 	static constexpr std::array<const char*, ThemesNum> ThemeNameMap = {
-		"GREEN MACHINE",
-		"BOOGIE OOGIE",
-		"COZY CORE",
-		"THE MEMO DEMO"
+		"VIHREÄ KONE",
+		"BUUGI UUGI",
+		"KOTOISA KOLO",
+		"MUISTIODEMO"
 	};
 
 	std::function<void(uint32_t)> keyCb;

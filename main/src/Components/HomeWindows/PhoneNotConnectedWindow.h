@@ -13,8 +13,8 @@ public:
 	PhoneNotConnectedWindow(lv_obj_t* parent, const PhoneNotConnectedData* params);
 
 private:
-	static constexpr const char* TITLE = "Phone";
-	static constexpr const char* Sentence = "Phone? What phone?";
+	static constexpr const char* TITLE = "Puhelin";
+	static constexpr const char* Sentence = "Puhelin? Mikä se?";
 
 	void buildUI();
 };

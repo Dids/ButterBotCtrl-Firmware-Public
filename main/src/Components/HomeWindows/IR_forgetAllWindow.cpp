@@ -25,7 +25,7 @@ void IR_forgetAllWindow::buildUI(const IR_forgetAllData data){
 
 		// Sentence label
 		lv_obj_t* sentenceLabel = lv_label_create(innerContent);
-		lv_label_set_text(sentenceLabel, "Nothing to forget");
+		lv_label_set_text(sentenceLabel, "Ei unohdettavaa");
 		lv_label_set_long_mode(sentenceLabel, LV_LABEL_LONG_WRAP);
 		lv_obj_add_style(sentenceLabel, labelDefaultStyle, 0);
 		lv_obj_set_style_text_align(sentenceLabel, LV_TEXT_ALIGN_CENTER, 0);
@@ -41,7 +41,7 @@ void IR_forgetAllWindow::buildUI(const IR_forgetAllData data){
 
 	// Sentence label
 	lv_obj_t* sentenceLabel = lv_label_create(innerContent);
-	lv_label_set_text(sentenceLabel, "Memory purged");
+	lv_label_set_text(sentenceLabel, "Muisti tyhjä");
 	lv_label_set_long_mode(sentenceLabel, LV_LABEL_LONG_WRAP);
 	lv_obj_add_style(sentenceLabel, labelDefaultStyle, 0);
 	lv_obj_set_style_text_align(sentenceLabel, LV_TEXT_ALIGN_CENTER, 0);

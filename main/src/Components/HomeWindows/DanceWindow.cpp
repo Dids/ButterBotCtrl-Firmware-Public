@@ -14,7 +14,7 @@ void DanceWindow::buildUI(const DanceData data){
 
 	// Sentence label
 	lv_obj_t* sentenceLabel = lv_label_create(innerContent);
-	lv_label_set_text(sentenceLabel, "Rhythm.exe unleashed");
+	lv_label_set_text(sentenceLabel, "Rytmi.exe vapaana");
 	lv_label_set_long_mode(sentenceLabel, LV_LABEL_LONG_WRAP);
 	lv_obj_add_style(sentenceLabel, labelDefaultStyle, 0);
 	lv_obj_set_style_margin_top(sentenceLabel, 6, 0);

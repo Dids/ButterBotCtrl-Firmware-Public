@@ -19,25 +19,25 @@ private:
 class PrevSongWindow : public MediaControlWindow {
 public:
 	PrevSongWindow(lv_obj_t* parent, const MediaControlData* params)
-		: MediaControlWindow(parent, "Music", Asset::MusicBack, "This sounds familiar"){}
+		: MediaControlWindow(parent, "Musiikki", Asset::MusicBack, "Kuulostaa tutulta"){}
 };
 
 class NextSongWindow : public MediaControlWindow {
 public:
 	NextSongWindow(lv_obj_t* parent, const MediaControlData* params)
-		: MediaControlWindow(parent, "Music", Asset::MusicForward, "Next track, same sadness"){}
+		: MediaControlWindow(parent, "Musiikki", Asset::MusicForward, "Uusi biisi, sama suru"){}
 };
 
 class PlayMusicWindow : public MediaControlWindow {
 public:
 	PlayMusicWindow(lv_obj_t* parent, const MediaControlData* params)
-		: MediaControlWindow(parent, "Music", Asset::MusicPlay, "Resuming the noise"){}
+		: MediaControlWindow(parent, "Musiikki", Asset::MusicPlay, "Meteli jatkuu"){}
 };
 
 class StopMusicWindow : public MediaControlWindow {
 public:
 	StopMusicWindow(lv_obj_t* parent, const MediaControlData* params)
-		: MediaControlWindow(parent, "Music", Asset::MusicPause, "Silence, finally"){}
+		: MediaControlWindow(parent, "Musiikki", Asset::MusicPause, "Vihdoin hiljaista"){}
 };
 
 #endif //BUTTERBOTCTRL_FIRMWARE_MEDIACONTROLWINDOW_H

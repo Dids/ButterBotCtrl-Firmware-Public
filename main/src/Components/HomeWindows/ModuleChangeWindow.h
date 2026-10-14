@@ -15,8 +15,8 @@ public:
 	void onData(const BBData* data) override;
 
 private:
-	static constexpr const char* TITLE = "Module Change";
-	static constexpr const char* ModuleRemovedSentence = "Lost a limb";
+	static constexpr const char* TITLE = "Moduulin vaihto";
+	static constexpr const char* ModuleRemovedSentence = "Menetin raajan";
 
 	void buildUI(ModuleData data);
 };

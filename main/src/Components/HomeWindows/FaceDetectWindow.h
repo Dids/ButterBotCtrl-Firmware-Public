@@ -17,7 +17,7 @@ public:
 	void onDismiss() override;
 
 private:
-	static constexpr const char* TITLE = "Face Detection";
+	static constexpr const char* TITLE = "Kasvontunnistus";
 
 	LVGIF* gif = nullptr;
 

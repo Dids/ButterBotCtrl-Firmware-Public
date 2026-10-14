@@ -13,8 +13,8 @@ public:
 	LEDTurnOnWindow(lv_obj_t* parent, const LEDTurnOnData* params);
 
 private:
-	static constexpr const char* TITLE = "LED Turn On";
-	static constexpr const char* Sentence = "Activated. Fear my shine";
+	static constexpr const char* TITLE = "LED päälle";
+	static constexpr const char* Sentence = "Päällä. Pelkää loistettani";
 
 	void buildUI(LEDTurnOnData data);
 };

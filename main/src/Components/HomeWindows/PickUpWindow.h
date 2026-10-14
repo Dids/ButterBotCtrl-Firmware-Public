@@ -16,8 +16,8 @@ private:
 	lv_obj_t* img;
 	lv_obj_t* sentenceLabel;
 
-	static constexpr const char* TITLE = "Pick Up";
-	static constexpr const char* Sentence = "Unhand me, mortal";
+	static constexpr const char* TITLE = "Nostettu";
+	static constexpr const char* Sentence = "Irti, kuolevainen";
 
 	void buildUI(PickUpData data);
 };

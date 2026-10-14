@@ -16,7 +16,7 @@ public:
 	void onData(const BBData* data) override;
 
 private:
-	static constexpr const char* TITLE = "Listen";
+	static constexpr const char* TITLE = "Kuuntelu";
 
 	void buildUI(ListenData data);
 };

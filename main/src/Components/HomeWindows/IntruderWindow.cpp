@@ -4,8 +4,8 @@
 
 static constexpr const char* TAG = "IntruderWindow";
 
-static constexpr const char* DetectedSentence = "Suspicious lifeform spotted!";
-static constexpr const char* NotDetectedSentence = "Zone clear!";
+static constexpr const char* DetectedSentence = "Epäilyttävä olento havaittu!";
+static constexpr const char* NotDetectedSentence = "Alue tyhjä!";
 
 IntruderWindow::IntruderWindow(lv_obj_t* parent, const IntruderData* params) : HomeWindow(parent, TITLE){
 	buildUI(*params);

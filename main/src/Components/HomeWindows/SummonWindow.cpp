@@ -24,7 +24,7 @@ void SummonWindow::loop(){
 void SummonWindow::buildUI(const SummonData data){
 	// Distance hint label
 	lv_obj_t* hintLabel = lv_label_create(innerContent);
-	lv_label_set_text(hintLabel, "Keep face 0.5M from camera");
+	lv_label_set_text(hintLabel, "Kasvot 0,5 m päähän kamerasta");
 	lv_label_set_long_mode(hintLabel, LV_LABEL_LONG_WRAP);
 	lv_obj_add_style(hintLabel, labelDefaultStyle, 0);
 	lv_obj_set_size(hintLabel, 116, LV_SIZE_CONTENT);

@@ -8,8 +8,8 @@ static const std::map<FaceForgetData::State, Asset> FaceForgetAssetImgMap = {
 };
 
 static const std::map<FaceForgetData::State, const char*> FaceForgetSentences = {
-	{ FaceForgetData::State::Done, "Void where love was" },
-	{ FaceForgetData::State::NoDataExist, "Forget... What?" },
+	{ FaceForgetData::State::Done, "Tyhjyys rakkauden tilalla" },
+	{ FaceForgetData::State::NoDataExist, "Unohda... mitä?" },
 };
 
 FaceForgetWindow::FaceForgetWindow(lv_obj_t* parent, const FaceForgetData* params) : HomeWindow(parent, TITLE){

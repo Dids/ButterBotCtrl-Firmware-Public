@@ -13,7 +13,7 @@ public:
 	BatteryLowWindow(lv_obj_t* parent, const BatteryData* params);
 
 private:
-	static constexpr const char* TITLE = "Battery Low";
+	static constexpr const char* TITLE = "Akku vähissä";
 
 	void buildUI(BatteryData data);
 };

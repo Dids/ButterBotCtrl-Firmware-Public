@@ -13,13 +13,13 @@ static const std::map<ModuleType, const Asset> ModuleAssetMap = {
 };
 
 static const std::map<ModuleType, const char*> ModuleSentenceMap = {
-	{ ModuleType::LED, "Light powers gained!" },
-	{ ModuleType::PerfBoard, "Tinkering mode unlocked!" },
-	{ ModuleType::Motion, "Motion paranoia activated!" },
-	{ ModuleType::CO2, "Air sniffer attached!" },
-	{ ModuleType::IR, "IR powers acquired!" },
-	{ ModuleType::TempHumidity, "Weather brain plugged!" },
-	{ ModuleType::Unknown, "Unknown module detected!" },
+	{ ModuleType::LED, "Valovoimat saatu!" },
+	{ ModuleType::PerfBoard, "Näpertelytila avattu!" },
+	{ ModuleType::Motion, "Liikevainoharha päällä!" },
+	{ ModuleType::CO2, "Ilmanhaistelija kiinni!" },
+	{ ModuleType::IR, "IR-voimat hankittu!" },
+	{ ModuleType::TempHumidity, "Sääaivot kytketty!" },
+	{ ModuleType::Unknown, "Tuntematon moduuli havaittu!" },
 };
 
 

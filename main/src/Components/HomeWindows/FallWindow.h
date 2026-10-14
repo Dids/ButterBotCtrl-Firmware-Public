@@ -16,8 +16,8 @@ private:
 	lv_obj_t* img;
 	lv_obj_t* sentenceLabel;
 
-	static constexpr const char* TITLE = "Fall";
-	static constexpr const char* Sentence = "My dignity... slipping";
+	static constexpr const char* TITLE = "Kaatuminen";
+	static constexpr const char* Sentence = "Arvokkuuteni... lipsuu";
 
 	void buildUI(FallData data);
 };

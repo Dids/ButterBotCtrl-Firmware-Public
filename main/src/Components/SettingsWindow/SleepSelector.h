@@ -29,7 +29,7 @@ private:
 		InactivityTimeout::Min30
 	};
 	static constexpr std::array<const char*, OptionsNum> OptionNameMap = {
-		"OFF",
+		"POIS",
 		"2 MIN",
 		"5 MIN",
 		"10 MIN",

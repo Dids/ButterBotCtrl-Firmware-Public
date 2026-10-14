@@ -28,7 +28,7 @@ public:
 private:
 	static constexpr int32_t Width = 128;
 	static constexpr int32_t Height = 120;
-	static constexpr const char* SettingsTitle = "SETTINGS";
+	static constexpr const char* SettingsTitle = "ASETUKSET";
 	static constexpr uint32_t ScrollSpeedPxPerSec = 40;
 
 	ThemeService* theme;

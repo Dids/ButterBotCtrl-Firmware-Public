@@ -10,12 +10,12 @@ static const std::map<FaceDetectData::State, Asset> FaceDetectAssetImgMap = {
 };
 
 static const std::map<FaceDetectData::State, const char*> FaceDetectSentences = {
-	{ FaceDetectData::State::AlreadySaved, "Error: Emotional conflict" },
-	{ FaceDetectData::State::NewOwner, "Attachment forming rapidly" },
-	{ FaceDetectData::State::NoFaceFound, "Nothing but void" },
-	{ FaceDetectData::State::NotRecognized, "You are not my real dad" },
-	{ FaceDetectData::State::Recognized, "It's you! Master of Butter!" },
-	{ FaceDetectData::State::Scanning, "Analyzing flesh geometry" },
+	{ FaceDetectData::State::AlreadySaved, "Virhe: tunneristiriita" },
+	{ FaceDetectData::State::NewOwner, "Kiintymys kasvaa nopeasti" },
+	{ FaceDetectData::State::NoFaceFound, "Pelkkää tyhjyyttä" },
+	{ FaceDetectData::State::NotRecognized, "Et ole oikea isäni" },
+	{ FaceDetectData::State::Recognized, "Sinä! Voin mestari!" },
+	{ FaceDetectData::State::Scanning, "Analysoin lihageometriaa" },
 };
 
 FaceDetectWindow::FaceDetectWindow(lv_obj_t* parent, const FaceDetectData* params) : HomeWindow(parent, TITLE){
@@ -58,7 +58,7 @@ void FaceDetectWindow::buildUI(const FaceDetectData data){
 
 			// Distance hint label
 			lv_obj_t* hintLabel = lv_label_create(innerContent);
-			lv_label_set_text(hintLabel, "Keep face 0.5M from camera");
+			lv_label_set_text(hintLabel, "Kasvot 0,5 m päähän kamerasta");
 			lv_label_set_long_mode(hintLabel, LV_LABEL_LONG_WRAP);
 			lv_obj_add_style(hintLabel, labelDefaultStyle, 0);
 			lv_obj_set_size(hintLabel, 116, LV_SIZE_CONTENT);

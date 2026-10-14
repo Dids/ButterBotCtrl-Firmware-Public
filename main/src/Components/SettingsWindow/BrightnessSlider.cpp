@@ -56,7 +56,7 @@ void BrightnessSlider::buildUI(lv_obj_t* parent){
 	// Brightness label
 	widgetLabel = lv_label_create(*this);
 	lv_obj_add_style(widgetLabel, labelDefaultStyle, 0);
-	lv_label_set_text(widgetLabel, "BRIGHTNESS");
+	lv_label_set_text(widgetLabel, "KIRKKAUS");
 	lv_obj_set_width(widgetLabel, 52);
 	lv_obj_set_pos(widgetLabel, 2, 0);
 

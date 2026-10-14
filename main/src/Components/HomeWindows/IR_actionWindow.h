@@ -15,7 +15,7 @@ public:
 	void onData(const BBData* data) override;
 
 private:
-	static constexpr const char* TITLE = "IR_action";
+	static constexpr const char* TITLE = "IR-toiminto";
 
 	void buildUI(IR_actionData data);
 };

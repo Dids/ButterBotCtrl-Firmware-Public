@@ -16,8 +16,8 @@ public:
 	void onDismiss() override;
 
 private:
-	static constexpr const char* TITLE = "LED Breathe";
-	static constexpr const char* Sentence = "Serenity protocol active";
+	static constexpr const char* TITLE = "LED hengittää";
+	static constexpr const char* Sentence = "Rauhaprotokolla käynnissä";
 
 	LVGIF* gif = nullptr;
 

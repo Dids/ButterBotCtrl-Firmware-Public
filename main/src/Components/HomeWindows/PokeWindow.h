@@ -15,7 +15,7 @@ public:
 private:
 	lv_obj_t* sentenceLabel;
 
-	static constexpr const char* TITLE = "Poke";
+	static constexpr const char* TITLE = "Tökkäys";
 
 	void buildUI(PokeData data);
 };

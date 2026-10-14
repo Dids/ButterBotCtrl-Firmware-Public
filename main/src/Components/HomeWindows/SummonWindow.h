@@ -22,7 +22,7 @@ private:
 	uint64_t lastMillis = 0;
 	int32_t progressVal = 0;
 
-	static constexpr const char* TITLE = "Summon";
+	static constexpr const char* TITLE = "Kutsu";
 	static constexpr int32_t ProgressBarMax = 2000;
 
 	void buildUI(SummonData data);

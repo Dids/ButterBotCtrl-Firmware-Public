@@ -13,7 +13,7 @@ public:
 	PersonWindow(lv_obj_t* parent, const PersonData* params);
 
 private:
-	static constexpr const char* TITLE = "Person";
+	static constexpr const char* TITLE = "Henkilö";
 
 	void buildUI(PersonData data);
 };

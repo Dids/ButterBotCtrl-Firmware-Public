@@ -17,7 +17,7 @@ public:
 	void onDismiss() override;
 
 private:
-	static constexpr const char* TITLE = "IR_list";
+	static constexpr const char* TITLE = "IR-lista";
 
 	LVGIF* gif = nullptr;
 
